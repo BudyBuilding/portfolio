@@ -1,0 +1,22 @@
+.button {
+  background: none;
+  border: 2px solid #40A794;
+  color: #40A794;
+  padding: 0 1.5rem;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: background-color 0.8s ease, color 0.8s ease, border-color 0.8s ease;
+}
+
+.button:hover {
+  background-color: #40A794;
+  color: #CCD8F8;
+  border-color: #CCD8F8;
+}
+
+.button-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=Button.css.map */

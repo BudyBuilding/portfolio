@@ -1,0 +1,19 @@
+.experience-box {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 1rem;
+}
+
+.left-side {
+  width: 7rem;
+}
+
+.period {
+  text-align: right;
+}
+
+.position {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=Experience.css.map */
