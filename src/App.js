@@ -16,11 +16,11 @@ function App() {
 
   const [projects, setProjects] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const projectsPerPage = 3;
+ // const projectsPerPage = 3;
 
 
   const totalPages = Math.ceil(projects.length - 2);
-const visiblePages = Math.min(totalPages, projects.length - projectsPerPage + 1);
+//const visiblePages = Math.min(totalPages, projects.length - projectsPerPage + 1);
 const handlePrevPage = () => {
   setCurrentPage(prevPage => Math.max(prevPage - 1, 0));
 };
@@ -29,8 +29,8 @@ const handleNextPage = () => {
   setCurrentPage(prevPage => Math.min(prevPage + 1, totalPages - 1));
 };
 
-const startSlice = Math.max(currentPage, 0);
-const endSlice = Math.min(startSlice + projectsPerPage, projects.length);
+///const startSlice = Math.max(currentPage, 0);
+//const endSlice = Math.min(startSlice + projectsPerPage, projects.length);
 
 
   
@@ -76,14 +76,14 @@ useEffect(() => {
     };
   }, []);
 
-  function smoothScroll(targetId) {
+  /*function smoothScroll(targetId) {
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({
         behavior: 'smooth'
       });
     }
-  }
+  }*/
   
   return (
     <div className="app">
