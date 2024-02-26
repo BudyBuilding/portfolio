@@ -24,7 +24,7 @@ function Project({ img, name, description, usedtech, url }) {
                 </div>
             )}
             <div className="link-button-box">
-                <a href={url} className="bttn" target="_blank">
+                <a href={url} className="bttn" rel="noreferrer" target="_blank">
                     <Button text="Open" />
                 </a>
             </div>

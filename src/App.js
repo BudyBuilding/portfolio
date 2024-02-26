@@ -8,7 +8,6 @@ import ContactMe from "./components/Modules/ContactMe";
 import Experiences from "./components/Modules/Experiences";
 import Skills from "./components/Modules/Skills";
 import Projects from "./components/Modules/Projects";
-import {personOutline, arrowBackOutline, arrowForward, arrowUpOutline} from 'ionicons/icons';
 import { getDatabase, ref, get } from 'firebase/database'; // Firebase adatbázis modul importálása
 
 function App() {
@@ -58,7 +57,7 @@ const endSlice = Math.min(startSlice + projectsPerPage, projects.length);
     if (firebaseApp) {
       fetchData();
     }
-  }, [firebaseApp]); // Ha a firebaseApp változik, újra futtatja a fetchData függvényt
+  }, []); // Ha a firebaseApp változik, újra futtatja a fetchData függvényt
 
 
 useEffect(() => {
