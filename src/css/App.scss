@@ -196,7 +196,10 @@ border-radius: 25vw;
     grid-row: 1/span 2;
 }
 
-
+.buttons {
+    display: flex;
+    gap: 2rem;
+}
 
 
 

@@ -140,6 +140,11 @@ html {
   grid-row: 1/span 2;
 }
 
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
+
 .skill-box {
   padding: 0 13vw;
 }

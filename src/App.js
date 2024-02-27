@@ -32,6 +32,16 @@ const handleNextPage = () => {
 ///const startSlice = Math.max(currentPage, 0);
 //const endSlice = Math.min(startSlice + projectsPerPage, projects.length);
 
+const handleDownload = () => {
+  // Az önéletrajz fájl elérési útvonala
+  const fileUrl = '/Szilveszter_Nyeste_CV_Eng.pdf'; // Például: /public/oneletrajz.pdf
+
+  // Letöltés elindítása
+  const link = document.createElement('a');
+  link.href = fileUrl;
+  link.download = 'Szilveszter_Nyeste_CV_Eng.pdf'; // Meghatározzuk a letöltött fájl nevét
+  link.click();
+};
 
   
 
@@ -93,7 +103,7 @@ useEffect(() => {
         </a>
       } 
       <Navigation />
-      <Hero />
+      <Hero handleDownload={handleDownload}/>
       <Experiences />
       <Skills />
 
