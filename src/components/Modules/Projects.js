@@ -47,7 +47,7 @@ function Projects({ projects }) {
 
 
     const startSlice = Math.max(currentPage, 0);
-    const endSlice = Math.min(startSlice + projectsPerPage, projects.length);
+//    const endSlice = Math.min(startSlice + projectsPerPage, projects.length);
 
     return (
         <div className='project-section' id='projects'>
