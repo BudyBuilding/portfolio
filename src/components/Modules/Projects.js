@@ -46,7 +46,7 @@ function Projects({ projects }) {
     };
 
 
-    const startSlice = Math.max(currentPage, 0);
+  //  const startSlice = Math.max(currentPage, 0);
 //    const endSlice = Math.min(startSlice + projectsPerPage, projects.length);
 
     return (
