@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './css/App.css';
-import { app as firebaseApp } from './components/Modules/firebase'; // Firebase inicializálás importálása
+import { app as firebaseApp } from './components/Modules/firebase';
 import Button from "./components/Reusable-components/Button"
 import Navigation from './components/Modules/Navigation';
 import Hero from './components/Modules/Hero';
@@ -8,29 +8,11 @@ import ContactMe from "./components/Modules/ContactMe";
 import Experiences from "./components/Modules/Experiences";
 import Skills from "./components/Modules/Skills";
 import Projects from "./components/Modules/Projects";
-import { getDatabase, ref, get } from 'firebase/database'; // Firebase adatbázis modul importálása
+import { getDatabase, ref, get } from 'firebase/database';
 
 function App() {
   const [showUpButton, setShowUpButton] = useState(false);
-
-
   const [projects, setProjects] = useState([]);
-  const [currentPage, setCurrentPage] = useState(0);
- // const projectsPerPage = 3;
-
-
-  const totalPages = Math.ceil(projects.length - 2);
-//const visiblePages = Math.min(totalPages, projects.length - projectsPerPage + 1);
-const handlePrevPage = () => {
-  setCurrentPage(prevPage => Math.max(prevPage - 1, 0));
-};
-
-const handleNextPage = () => {
-  setCurrentPage(prevPage => Math.min(prevPage + 1, totalPages - 1));
-};
-
-///const startSlice = Math.max(currentPage, 0);
-//const endSlice = Math.min(startSlice + projectsPerPage, projects.length);
 
 const handleDownload = () => {
   // Az önéletrajz fájl elérési útvonala
@@ -42,8 +24,6 @@ const handleDownload = () => {
   link.download = 'Szilveszter_Nyeste_CV_Eng.pdf'; // Meghatározzuk a letöltött fájl nevét
   link.click();
 };
-
-  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -63,21 +43,19 @@ const handleDownload = () => {
       }
     };
   
-    // Ellenőrizze, hogy a firebaseApp inicializálva van-e, mielőtt megpróbálja letölteni az adatokat
     if (firebaseApp) {
       fetchData();
     }
-  }, []); // Ha a firebaseApp változik, újra futtatja a fetchData függvényt
+  }, []);
 
-
-useEffect(() => {
-    function handleScroll() {
+  useEffect(() => {
+    const handleScroll = () => {
       if (window.scrollY >= window.innerHeight * 0.5) {
         setShowUpButton(true);
       } else {
         setShowUpButton(false);
       }
-    }
+    };
 
     window.addEventListener('scroll', handleScroll);
 
@@ -86,15 +64,6 @@ useEffect(() => {
     };
   }, []);
 
-  /*function smoothScroll(targetId) {
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  }*/
-  
   return (
     <div className="app">
       {showUpButton && 
@@ -107,11 +76,11 @@ useEffect(() => {
       <Experiences />
       <Skills />
 
-      <Projects projects={projects} currentPage={currentPage} handleNextPage={handleNextPage} handlePrevPage={handlePrevPage}/>
+      <Projects projects={projects} />
       <div className='contact-section' id="contact">
         <div className='main-title'>Contact me</div>
         <div className='form-box'>
-          <ContactMe firebaseApp={firebaseApp} /> {/* Firebase inicializáció átadása a ContactMe komponensnek */}
+          <ContactMe firebaseApp={firebaseApp} />
         </div>
       </div>
     </div>  

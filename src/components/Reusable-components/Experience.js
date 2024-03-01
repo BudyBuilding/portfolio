@@ -9,7 +9,7 @@ function experience ({period, name, position, description}) {
             <div className="right-side">
                 <div className="name">{name}</div>
                 {position && <div className="position">{position}</div>}
-                <div className="description">{description}</div>
+                <div className="description-exp">{description}</div>
             </div>
         </div>
     );

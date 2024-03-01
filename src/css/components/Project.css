@@ -1,9 +1,10 @@
 .project {
   background-color: #0A192F;
   border: 3px solid #40A794;
-  width: 20vw;
+  width: 20rem;
   border-radius: 3rem;
   overflow: hidden;
+  height: 46rem;
   color: #a4aeca;
   text-align: center;
 }
@@ -14,6 +15,7 @@
 }
 
 .project-bottom-side {
+  height: -moz-max-content;
   height: max-content;
   margin: 0 1rem;
   margin-bottom: 2rem;
@@ -62,6 +64,4 @@
   margin-top: 2rem;
   display: flex;
   justify-content: center;
-}
-
-/*# sourceMappingURL=Project.css.map */
+}/*# sourceMappingURL=Project.css.map */

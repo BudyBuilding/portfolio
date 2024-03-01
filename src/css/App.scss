@@ -1,5 +1,6 @@
 @use 'distances/dist';
 @use 'colors/colors';
+@import 'media';
 
 * {
     box-sizing: border-box;
@@ -45,7 +46,13 @@ html {
   
 
 
-$side-dist: dist.$side-distance;
+$side-dist: dist.$side-distance-standard;
+$side-dist-medium: dist.$side-distance-medium;
+$side-dist-small: dist.$side-distance-small;
+$side-dist-extra-small: dist.$side-distance-extra-small;
+
+
+
 $background-color: colors.$background-color;
 $header-color: colors.$header-color;
 $green-color: colors.$green-color;
@@ -55,11 +62,10 @@ $text-gray-3: colors.$text-color-gray-3;
 
 
 .app {
-    background-color: $background-color;
+   background-color: $background-color;
     color: white;
     padding: 0;
     padding-bottom: 15rem;
-    font-size: 62.5%;
     overflow-x: hidden;
 }
 
@@ -118,21 +124,19 @@ $text-gray-3: colors.$text-color-gray-3;
 
 
 /**Land-page*/
-
-
 .land-page {
     position: relative;
     padding: 0 $side-dist;
     padding-top: 5rem;
     margin-bottom: 5rem;
-}
 
+}
 
 .img-box {
     position: absolute;
     right: 10rem;
-        top: 10rem;
-        z-index: 0;
+    top: 10rem;
+    z-index: 0;
 }
 
 .green { 
@@ -175,9 +179,10 @@ $text-gray-3: colors.$text-color-gray-3;
 
 
 .img {
-width: 25vw;
-border-radius: 25vw;
+    width: 25vw;
+    border-radius: 25vw;
 }
+
 
 //About me
 .about-me-box {
@@ -187,8 +192,8 @@ border-radius: 25vw;
 .about-me-boxes {
     margin: 0 5rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
+    
 }
 
 .courses-section {
@@ -200,7 +205,6 @@ border-radius: 25vw;
     display: flex;
     gap: 2rem;
 }
-
 
 
 
@@ -226,32 +230,38 @@ border-radius: 25vw;
 //    @include border;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 8rem;
+    column-gap: 3rem;
     row-gap: 1.5rem;
     margin-bottom: 1rem;
 }
 
+
 //projects
 .project-section {
     padding: 0 $side-dist;
-    height: 100vh;
+    height: 53rem;
 }
 
 .project-list {
+    margin: 0 auto;
+    border: thin solid red;
         position: relative;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
     margin-top: 2rem;
-    gap: 0;  
-    height: 80vh;    
     transition: transform 0.3s ease; 
+    column-gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project-box {
+    margin: 0 auto;
 }
 
 .project-navigation-buttons {
     position: absolute;
     top: 50%;
     display: flex;
-    width: 110%;
+    width: 105%;
     justify-content: space-between;
     margin: 0 -2rem;
     }
@@ -262,3 +272,215 @@ border-radius: 25vw;
     padding: 0 $side-dist;
     
 }
+
+
+@media (max-width: 1800px) {
+    .html {
+        font-size: 50%;
+    }
+
+    .land-page {
+        padding: 0 $side-dist-medium;
+        padding-top: 5rem;
+    }      
+    .salute-text {
+        font-size: 1.3rem;
+    }
+    
+    .name-text {
+        font-size: 4rem;
+    }
+    
+    .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    
+    .img {
+        width: 25vw;
+        border-radius: 25vw;
+    }
+    
+    .about-me-box {
+        padding: 0 $side-dist-medium;
+    }
+    
+    .about-me-boxes {
+        margin: 0 3rem;     
+    }
+    
+    .skill-box {
+        padding: 0 $side-dist-medium;
+    }
+    
+    .secondary-title {
+        font-size: 2rem;
+    }
+    
+    .skill-list {
+        margin: 0 3rem;
+        column-gap: 3rem;
+        row-gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+//
+    .project-section {
+        padding: 0 $side-dist-medium;
+    }
+    
+    .project-list {
+            position: relative;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+    .project-navigation-buttons {
+        top: 50%;
+        display: flex;
+        width: 105%;
+        justify-content: space-between;
+        margin: 0 -2rem;
+        }
+    
+    
+    
+    
+    .contact-section {
+        padding: 0 $side-dist-medium;
+        
+    }
+
+  }
+
+    @media (max-width: 1800px) {
+        .project-navigation-buttons {
+            width: 110%;
+            }
+        .about-me-boxes {
+            grid-template-columns: repeat(2, 1fr);
+    
+        }
+    
+        }
+
+
+    @media (max-width: 1450px) {
+        .html {
+            font-size: 40%;
+        }
+    
+        .land-page {
+            padding: 0 $side-dist-small;
+            padding-top: 5rem;
+        }      
+        
+        .about-me-box {
+            padding: 0 $side-dist-small;
+        }
+        
+        .skill-box {
+            padding: 0 $side-dist-small;
+        }
+        
+        .skill-list {
+    
+            margin: 0 3rem;
+            column-gap: 3rem;
+            row-gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    @media (max-width: 1280px) {
+        .html {
+            font-size: 70%;
+        }
+    
+        .land-page {
+            padding: 0 $side-dist-extra-small;
+            padding-top: 5rem;
+        }      
+        
+        .about-me-box {
+            padding: 0 $side-dist-extra-small;
+        }
+        
+        .skill-box {
+            padding: 0 $side-dist-extra-small;
+        }
+        
+        .skill-list {
+    
+            margin: 0 3rem;
+            column-gap: 3rem;
+            row-gap: 0.5rem;
+            margin-bottom: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+    @media (max-width: 1150px) {
+        .description {
+            font-size: 1.2rem;
+            width: 50%;
+        }
+
+        .salute-text {
+            font-size: 1.3rem;
+        }
+        
+        .name-text {
+            font-size: 3rem;
+            margin-bottom: 5rem ;
+        }
+        
+        .main-title {
+            font-size: 2rem;
+        }
+        
+        .skill-list {
+            width: 90%;
+            margin: 0 3rem;
+            row-gap: 0.5rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+
+        .project-navigation-buttons {
+            width: 120%;
+            }
+
+            .courses-section {
+                grid-column: 2;
+            }
+        
+    }
+
+    @media (max-width: 900px) {
+        .right-side {
+            width: 50rem;
+        }
+        .description-exp {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        .about-me-boxes {
+            grid-template-columns: 1fr;
+    
+        }
+
+        .courses-section {
+            grid-column: 1;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .skill-list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }

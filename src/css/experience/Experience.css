@@ -8,6 +8,10 @@
   width: 7rem;
 }
 
+.right-side {
+  width: 30rem;
+}
+
 .period {
   text-align: right;
 }
@@ -16,4 +20,47 @@
   font-size: 1rem;
 }
 
-/*# sourceMappingURL=Experience.css.map */
+.description-exp {
+  color: #a4aeca;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+@media (max-width: 1800px) {
+  .right-side {
+    width: 25rem;
+  }
+}
+@media (max-width: 1280px) {
+  .right-side {
+    width: 20rem;
+  }
+  .description-exp {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 1080px) {
+  .right-side {
+    width: 15rem;
+  }
+  .description-exp {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .right-side {
+    width: 75%;
+  }
+  .description-exp {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .position {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=Experience.css.map */

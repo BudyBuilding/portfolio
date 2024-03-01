@@ -6,6 +6,9 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
+  gap: 1rem;
+  width: 20rem;
+  margin: auto;
 }
 
 .skill-name {
@@ -18,7 +21,7 @@
 .visualization-box {
   border-radius: 50rem;
   border: 2px solid #40A794;
-  width: 5rem;
+  width: 17rem;
   height: 1.2rem;
   overflow: hidden;
 }
@@ -28,4 +31,22 @@
   height: 2rem;
 }
 
-/*# sourceMappingURL=Skill.css.map */
+@media (max-width: 1800px) {
+  .visualization-box {
+    width: 13rem;
+  }
+}
+@media (max-width: 1570px) {
+  .skill-name {
+    font-size: 1.2rem;
+  }
+  .visualization-box {
+    height: 1rem;
+    width: 10rem;
+  }
+}
+@media (max-width: 900px) {
+  .skill {
+    width: 70%;
+  }
+}/*# sourceMappingURL=Skill.css.map */

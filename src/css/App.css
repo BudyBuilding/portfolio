@@ -1,3 +1,8 @@
+@media screen and (max-width: 600px) {
+  .app {
+    background-color: lightblue;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -11,7 +16,6 @@ html {
   color: white;
   padding: 0;
   padding-bottom: 15rem;
-  font-size: 62.5%;
   overflow-x: hidden;
 }
 
@@ -69,7 +73,7 @@ html {
 /**Land-page*/
 .land-page {
   position: relative;
-  padding: 0 13vw;
+  padding: 0 13rem;
   padding-top: 5rem;
   margin-bottom: 5rem;
 }
@@ -126,13 +130,13 @@ html {
 }
 
 .about-me-box {
-  padding: 0 13vw;
+  padding: 0 13rem;
 }
 
 .about-me-boxes {
   margin: 0 5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .courses-section {
@@ -146,7 +150,7 @@ html {
 }
 
 .skill-box {
-  padding: 0 13vw;
+  padding: 0 13rem;
 }
 
 .skill-m-title {
@@ -164,37 +168,205 @@ html {
   margin: 0 5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 8rem;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
   row-gap: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .project-section {
-  padding: 0 13vw;
-  height: 100vh;
+  padding: 0 13rem;
+  height: 53rem;
 }
 
 .project-list {
+  margin: 0 auto;
+  border: thin solid red;
   position: relative;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
   margin-top: 2rem;
-  gap: 0;
-  height: 80vh;
   transition: transform 0.3s ease;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project-box {
+  margin: 0 auto;
 }
 
 .project-navigation-buttons {
   position: absolute;
   top: 50%;
   display: flex;
-  width: 110%;
+  width: 105%;
   justify-content: space-between;
   margin: 0 -2rem;
 }
 
 .contact-section {
-  padding: 0 13vw;
+  padding: 0 13rem;
 }
 
-/*# sourceMappingURL=App.css.map */
+@media (max-width: 1800px) {
+  .html {
+    font-size: 50%;
+  }
+  .land-page {
+    padding: 0 10rem;
+    padding-top: 5rem;
+  }
+  .salute-text {
+    font-size: 1.3rem;
+  }
+  .name-text {
+    font-size: 4rem;
+  }
+  .main-title {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .img {
+    width: 25vw;
+    border-radius: 25vw;
+  }
+  .about-me-box {
+    padding: 0 10rem;
+  }
+  .about-me-boxes {
+    margin: 0 3rem;
+  }
+  .skill-box {
+    padding: 0 10rem;
+  }
+  .secondary-title {
+    font-size: 2rem;
+  }
+  .skill-list {
+    margin: 0 3rem;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    row-gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .project-section {
+    padding: 0 10rem;
+  }
+  .project-list {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  .project-navigation-buttons {
+    top: 50%;
+    display: flex;
+    width: 105%;
+    justify-content: space-between;
+    margin: 0 -2rem;
+  }
+  .contact-section {
+    padding: 0 10rem;
+  }
+}
+@media (max-width: 1800px) {
+  .project-navigation-buttons {
+    width: 110%;
+  }
+  .about-me-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1450px) {
+  .html {
+    font-size: 40%;
+  }
+  .land-page {
+    padding: 0 7vw;
+    padding-top: 5rem;
+  }
+  .about-me-box {
+    padding: 0 7vw;
+  }
+  .skill-box {
+    padding: 0 7vw;
+  }
+  .skill-list {
+    margin: 0 3rem;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    row-gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 1280px) {
+  .html {
+    font-size: 70%;
+  }
+  .land-page {
+    padding: 0 5vw;
+    padding-top: 5rem;
+  }
+  .about-me-box {
+    padding: 0 5vw;
+  }
+  .skill-box {
+    padding: 0 5vw;
+  }
+  .skill-list {
+    margin: 0 3rem;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    row-gap: 0.5rem;
+    margin-bottom: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1150px) {
+  .description {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+  .salute-text {
+    font-size: 1.3rem;
+  }
+  .name-text {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+  .main-title {
+    font-size: 2rem;
+  }
+  .skill-list {
+    width: 90%;
+    margin: 0 3rem;
+    row-gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-navigation-buttons {
+    width: 120%;
+  }
+  .courses-section {
+    grid-column: 2;
+  }
+}
+@media (max-width: 900px) {
+  .right-side {
+    width: 50rem;
+  }
+  .description-exp {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .about-me-boxes {
+    grid-template-columns: 1fr;
+  }
+  .courses-section {
+    grid-column: 1;
+  }
+}
+@media (max-width: 900px) {
+  .skill-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=App.css.map */

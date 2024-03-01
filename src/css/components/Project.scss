@@ -5,9 +5,10 @@
 .project {
     background-color: colors.$background-color;
     border: 3px solid colors.$green-color;
-    width: 20vw;
+    width: 20rem;
     border-radius: 3rem;
     overflow: hidden;
+    height: 46rem;
     color: colors.$text-color-gray-3;
     text-align: center;
 }

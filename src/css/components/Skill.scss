@@ -9,6 +9,9 @@
     justify-content: space-between;
     display: flex;
     align-items: center;
+    gap: 1rem;
+    width: 20rem;
+    margin: auto;
 }
 
 .skill-name {
@@ -21,7 +24,7 @@
 .visualization-box {
     border-radius: 50rem;
     border: 2px solid colors.$green-color;
-    width: dist.$skill-max;
+    width: dist.$skill-standard;
     height: 1.2rem;
     overflow: hidden;
     //width: 7rem;
@@ -30,4 +33,31 @@
 .skill-value {
     background-color: colors.$green-color;
     height: 2rem;
+}
+
+@media (max-width: 1800px) {
+
+    .visualization-box {
+        width: dist.$skill-medium;
+    }
+}
+
+@media (max-width: 1570px) {
+    .skill-name {
+        font-size: 1.2rem;
+    }
+    .visualization-box {
+        height: 1rem;
+        width: dist.$skill-small;
+    }
+}
+
+@media (max-width: 900px) {
+    .skill {
+        width: 70%;
+    }
+
+    .visualization-box {
+        //        width: dist.$skill-extra-small;
+    }
 }
