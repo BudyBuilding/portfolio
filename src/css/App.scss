@@ -60,7 +60,7 @@ $text-gray-3: colors.$text-color-gray-3;
   background-color: $background-color;
   color: white;
   padding: 0;
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
   overflow-x: hidden;
 }
 
@@ -71,6 +71,10 @@ $text-gray-3: colors.$text-color-gray-3;
   align-items: center;
   height: 10vh;
   //    background-color: $header-color;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .icon {
@@ -84,8 +88,15 @@ $text-gray-3: colors.$text-color-gray-3;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 1;
   cursor: pointer;
+  border-radius: 4rem;
+}
+
+.upp-butt:active,
+.upp-butt:hover,
+.upp-butt:focus {
+  border: 4rem;
 }
 
 .menu {
@@ -93,7 +104,7 @@ $text-gray-3: colors.$text-color-gray-3;
   stroke-width: "3px";
   font-weight: 600;
   color: $green-color;
-  position: absolute;
+  position: fixed;
   right: 5%;
   top: 5%;
   cursor: pointer;
@@ -129,14 +140,11 @@ $text-gray-3: colors.$text-color-gray-3;
   border-radius: 5rem;
 }
 
-  .nav-link-button:hover {
-    background-color: rgba(177, 175, 175, 0.534);
-    color: $text-gray-1;
-    border: 3px solid $green-color;     
-  
-    
-  }
-
+.nav-link-button:hover {
+  background-color: rgba(177, 175, 175, 0.534);
+  color: $text-gray-1;
+  border: 3px solid $green-color;
+}
 
 /**Land-page*/
 .land-page {
@@ -274,7 +282,6 @@ $text-gray-3: colors.$text-color-gray-3;
   justify-content: space-between;
   margin: 0 -2rem;
 }
-
 .contact-section {
   padding: 0 $side-dist;
 }
@@ -314,7 +321,7 @@ $text-gray-3: colors.$text-color-gray-3;
     margin: 0 3rem;
   }
 
-  .skill-box {
+  .skill-box, .project-section, .contact-section {
     padding: 0 $side-dist-medium;
   }
 
@@ -343,7 +350,7 @@ $text-gray-3: colors.$text-color-gray-3;
   .project-navigation-buttons {
     top: 50%;
     display: flex;
-    width: 105%;
+    width: 95%;
     justify-content: space-between;
     margin: 0 -2rem;
   }
@@ -376,7 +383,7 @@ $text-gray-3: colors.$text-color-gray-3;
     padding: 0 $side-dist-small;
   }
 
-  .skill-box {
+  .skill-box, .project-section, .contact-section {
     padding: 0 $side-dist-small;
   }
 
@@ -402,7 +409,7 @@ $text-gray-3: colors.$text-color-gray-3;
     padding: 0 $side-dist-extra-small;
   }
 
-  .skill-box {
+  .skill-box, .project-section, .contact-section {
     padding: 0 $side-dist-extra-small;
   }
 
@@ -442,7 +449,7 @@ $text-gray-3: colors.$text-color-gray-3;
   }
 
   .project-navigation-buttons {
-    width: 120%;
+    width: 105%;
   }
 
   .courses-section {
@@ -455,23 +462,16 @@ $text-gray-3: colors.$text-color-gray-3;
     justify-content: center;
   }
 
-  .icon {
-    font-size: 2rem;
-    stroke-width: "3px";
-    font-weight: 600;
-    color: $green-color;
-  }
-
   .header-right-side {
     margin: 0;
     padding: 0;
   }
 
   .header-button-list-box {
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0;
-    z-index: 0;
+    z-index: 2;
     height: 100vh;
     width: 100vw;
     justify-content: center;
@@ -497,9 +497,8 @@ $text-gray-3: colors.$text-color-gray-3;
     background-color: rgba(36, 36, 36, 0.534);
     border-radius: 5rem;
     color: $text-gray-3;
-    border: 3px solid $green-color;    
+    border: 3px solid $green-color;
     transition: background-color 0.5s, color 0.5s; /* Átmenet beállítása */
-
   }
 
   .nav-link-button:hover {

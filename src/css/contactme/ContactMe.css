@@ -1,59 +1,43 @@
-@charset "UTF-8";
 .form-box {
   display: flex;
-  justify-content: center; /* Középre igazítás */
+  justify-content: center;
+  gap: 0;
 }
 
 .form {
   border: 1px solid #40A794;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Két egyenlő széles oszlop */
-}
-
-.label {
-  align-self: center; /* Címkék középre igazítása a magasságot tekintve */
-}
-
-.message {
-  grid-column: span 2; /* A message mező kiterjed két oszlopra */
-  height: 15rem;
 }
 
 .input-field {
+  padding: 1rem;
   font-size: 1.5rem;
   background: none;
+  margin: 0;
   border: none;
   border: 1px solid #40A794;
   width: 100%;
   color: #CCD8F8;
-} /* ContactMe.css */
-.form-box {
-  display: flex;
-  justify-content: center; /* Középre igazítás */
-}
-
-.form {
-  border: 1px solid #40A794;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatikusan hozzon létre új oszlopot, ha szükséges, legalább 200px széles */
-  grid-gap: 10px; /* Rések a cellák között */
-}
-
-.label {
-  align-self: center; /* Címkék középre igazítása a magasságot tekintve */
 }
 
 .message {
-  grid-column: span 2; /* A message mező kiterjed két oszlopra */
   height: 15rem;
   resize: none;
+  border-bottom: 10px;
 }
 
-.input-field {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  border: 1px solid #40A794;
+.bttn-send {
   width: 100%;
-  color: #CCD8F8;
+  background-color: #40A794;
+  display: flex;
+  border: 1px solid #40A794;
+  align-items: center;
+  height: 3rem;
+  margin: 0;
+}
+
+.send-message {
+  margin: auto;
+  font-size: 1.5rem;
+  height: -moz-max-content;
+  height: max-content;
 }/*# sourceMappingURL=ContactMe.css.map */

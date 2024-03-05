@@ -1,4 +1,11 @@
+@charset "UTF-8";
+.button-box {
+  border-radius: 4rem;
+  transform: translateZ(0); /* A sima átmenet érdekében */
+}
+
 .button {
+  overflow: hidden;
   background: none;
   border: 2px solid #40A794;
   color: #40A794;
@@ -14,9 +21,14 @@
   border-color: #CCD8F8;
 }
 
+.button:active {
+  transform: translateY(1px); /* Opcionálisan adhatunk egy kis animációt a gomb lenyomására */
+}
+
 .button-text {
   font-size: 1.5rem;
   font-weight: 700;
+  border-radius: 4rem;
 }
 
 @media (max-width: 500px) {

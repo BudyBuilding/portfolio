@@ -40,7 +40,7 @@ function ContactMe({ firebase }) {
         <div className='form-box'>
             <form className='form' onSubmit={handleSubmit}>
                 <input 
-                    className='input-field name' 
+                    className='input-field ' 
                     type="text" 
                     id="name" 
                     name="name" 
@@ -66,8 +66,8 @@ function ContactMe({ firebase }) {
                     onChange={handleChange}
                 />
 
-                <div className='bttn'>
-                    <Button text={"Send"} type="submit" />
+                <div className='bttn-send' type="submit">
+                    <p className='send-message'> Send message</p>
                 </div>
             </form>
         </div>

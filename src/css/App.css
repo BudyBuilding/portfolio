@@ -16,7 +16,7 @@ html {
   background-color: #0A192F;
   color: white;
   padding: 0;
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
   overflow-x: hidden;
 }
 
@@ -26,6 +26,10 @@ html {
   padding: 0 3rem;
   align-items: center;
   height: 10vh;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .icon {
@@ -39,8 +43,15 @@ html {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 1;
   cursor: pointer;
+  border-radius: 4rem;
+}
+
+.upp-butt:active,
+.upp-butt:hover,
+.upp-butt:focus {
+  border: 4rem;
 }
 
 .menu {
@@ -48,7 +59,7 @@ html {
   stroke-width: "3px";
   font-weight: 600;
   color: #40A794;
-  position: absolute;
+  position: fixed;
   right: 5%;
   top: 5%;
   cursor: pointer;
@@ -261,7 +272,7 @@ html {
   .about-me-boxes {
     margin: 0 3rem;
   }
-  .skill-box {
+  .skill-box, .project-section, .contact-section {
     padding: 0 10rem;
   }
   .secondary-title {
@@ -286,7 +297,7 @@ html {
   .project-navigation-buttons {
     top: 50%;
     display: flex;
-    width: 105%;
+    width: 95%;
     justify-content: space-between;
     margin: 0 -2rem;
   }
@@ -313,7 +324,7 @@ html {
   .about-me-box {
     padding: 0 7vw;
   }
-  .skill-box {
+  .skill-box, .project-section, .contact-section {
     padding: 0 7vw;
   }
   .skill-list {
@@ -335,7 +346,7 @@ html {
   .about-me-box {
     padding: 0 5vw;
   }
-  .skill-box {
+  .skill-box, .project-section, .contact-section {
     padding: 0 5vw;
   }
   .skill-list {
@@ -369,7 +380,7 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
   .project-navigation-buttons {
-    width: 120%;
+    width: 105%;
   }
   .courses-section {
     grid-column: 2;
@@ -379,21 +390,15 @@ html {
   .header-box {
     justify-content: center;
   }
-  .icon {
-    font-size: 2rem;
-    stroke-width: "3px";
-    font-weight: 600;
-    color: #40A794;
-  }
   .header-right-side {
     margin: 0;
     padding: 0;
   }
   .header-button-list-box {
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0;
-    z-index: 0;
+    z-index: 2;
     height: 100vh;
     width: 100vw;
     justify-content: center;
