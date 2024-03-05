@@ -49,4 +49,23 @@
   .skill {
     width: 70%;
   }
+}
+@media (max-width: 600px) {
+  .skill {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .skill {
+    width: 100%;
+  }
+}
+@media (max-width: 380px) {
+  .skill-name {
+    font-size: 1rem;
+  }
+  .visualization-box {
+    height: 0.8rem;
+    width: 40%;
+  }
 }/*# sourceMappingURL=Skill.css.map */

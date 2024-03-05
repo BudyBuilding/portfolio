@@ -4,22 +4,33 @@
 $time: 0.8s;
 
 .button {
-    background: none;
-    border: 2px solid colors.$green-color;
-    color: colors.$green-color;
-    padding: 0 1.5rem;
-    border-radius: 4rem;
-    cursor: pointer;
-    transition: background-color $time ease, color $time ease, border-color $time ease; 
+  background: none;
+  border: 2px solid colors.$green-color;
+  color: colors.$green-color;
+  padding: 0 1.5rem;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: background-color $time ease, color $time ease,
+    border-color $time ease;
 }
 
 .button:hover {
-    background-color: colors.$green-color;
-    color: colors.$text-color-gray-1;
-    border-color: colors.$text-color-gray-1;
+  background-color: colors.$green-color;
+  color: colors.$text-color-gray-1;
+  border-color: colors.$text-color-gray-1;
 }
 
 .button-text {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  .button {
+    padding: 0 1.2rem;
+  }
+
+  .button-text {
+    font-size: 1.2rem;
+  }
 }

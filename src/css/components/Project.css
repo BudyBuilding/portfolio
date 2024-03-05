@@ -51,6 +51,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+  height: 6rem;
 }
 
 .tech {
@@ -61,7 +62,84 @@
 }
 
 .link-button-box {
-  margin-top: 2rem;
   display: flex;
+  margin-top: 3rem;
   justify-content: center;
+}
+
+@media (max-width: 750px) {
+  .project {
+    border: 3px solid #40A794;
+    width: 17rem;
+    height: 37rem;
+  }
+  .project-bottom-side {
+    margin: 0 0.8rem;
+    margin-bottom: 2rem;
+  }
+  .project-title-box {
+    height: 5rem;
+  }
+  .project-title {
+    color: #CCD8F8;
+    font-size: 2rem;
+  }
+  .project-desc-box {
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-desc {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .tech-list {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    height: 4rem;
+  }
+  .tech {
+    font-size: 1.3rem;
+  }
+  .link-button-box {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 400px) {
+  .project {
+    border: 3px solid #40A794;
+    width: 13rem;
+    height: 30rem;
+  }
+  .project-title-box {
+    height: 3rem;
+  }
+  .project-title {
+    color: #CCD8F8;
+    font-size: 1.8rem;
+  }
+  .project-desc-box {
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-desc {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .tech-list {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    height: 4rem;
+  }
+  .tech {
+    font-size: 1rem;
+  }
+  .link-button-box {
+    margin-top: 2rem;
+  }
 }/*# sourceMappingURL=Project.css.map */

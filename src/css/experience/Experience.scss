@@ -1,79 +1,102 @@
-
 @use '../colors/colors';
 
-    .experience-box {
-        display: flex;
-        font-size: 1.2rem;
-        gap: 1rem;
-    }
+.experience-box {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 1rem;
+}
 
-    .left-side {
-        width: 7rem;
-    }
+.left-side {
+  width: 7rem;
+}
 
-    .right-side {
-        width: 30rem;
-    }
+.right-side {
+  width: 30rem;
+}
 
-    .period {
-        text-align: right;
-    }
+.period {
+  text-align: right;
+}
 
-    .name {
+.position {
+  font-size: 1rem;
+}
 
-    }
+.description-exp {
+  color: colors.$text-color-gray-3;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
 
-    .position {
-        font-size: 1rem;
-    }
+@media (max-width: 1800px) {
+  .right-side {
+    width: 25rem;
+  }
+}
 
-    .description-exp {
-        color: colors.$text-color-gray-3;
-        font-size: 1.2rem;
-        line-height: 1.8rem;
-    }
+@media (max-width: 1280px) {
+  .right-side {
+    width: 20rem;
+  }
+  .description-exp {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
 
-    @media (max-width: 1800px) {
-        .right-side {
-            width: 25rem;
-        }
-    }
+@media (max-width: 1080px) {
+  .right-side {
+    width: 15rem;
+  }
+  .description-exp {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
 
-    
-    @media (max-width: 1280px) {
-        .right-side {
-            width: 20rem;
-        }
-        .description-exp {
-            font-size: 1rem;
-            line-height: 1.5rem;
-        }
-    }
+@media (max-width: 900px) {
+  .right-side {
+    width: 75%;
+  }
+  .description-exp {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-    @media (max-width: 1080px) {
-        .right-side {
-            width: 15rem;
-        }
-        .description-exp {
-            font-size: 1rem;
-            line-height: 1.5rem;
-        }
-    }
+  .name {
+    font-size: 1rem;
+  }
 
-    @media (max-width: 900px) {
-        .right-side {
-            width: 75%;
-        }
-        .description-exp {
-            font-size: 1rem;
-            line-height: 1.5rem;
-        }
+  .position {
+    font-size: 0.8rem;
+  }
+}
 
-        .name {
-            font-size: 1rem;
-        }
+@media (max-width: 550px) {
+  .experience-box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    gap: 0.2rem;
+    width: 100%;
+  }
+  .period {
+    text-align: left;
+  }
 
-        .position {
-            font-size: 0.8rem;
-        }
-    }
+  .name,
+  .position {
+    margin-bottom: 0.5rem;
+  }
+
+  .description-exp {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 100%;
+  }
+
+  .right-side {
+    width: 100%;
+  }
+}

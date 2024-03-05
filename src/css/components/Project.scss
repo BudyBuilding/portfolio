@@ -1,75 +1,163 @@
 @use "../distances/dist";
 @use "../colors/colors";
 
-
 .project {
-    background-color: colors.$background-color;
-    border: 3px solid colors.$green-color;
-    width: 20rem;
-    border-radius: 3rem;
-    overflow: hidden;
-    height: 46rem;
-    color: colors.$text-color-gray-3;
-    text-align: center;
+  background-color: colors.$background-color;
+  border: 3px solid colors.$green-color;
+  width: 20rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  height: 46rem;
+  color: colors.$text-color-gray-3;
+  text-align: center;
 }
 
-
 .project-image {
-    width: 100%;
-    border-bottom: 3px solid colors.$green-color;
+  width: 100%;
+  border-bottom: 3px solid colors.$green-color;
 }
 
 .project-bottom-side {
-    height: max-content;
-    margin: 0 1rem;
-    margin-bottom: 2rem;
-    flex-direction: column;
-    height: auto;
+  height: max-content;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  height: auto;
 }
 
 .project-title-box {
-    display: flex;    
-    justify-content: center;
-    align-items: center;
-    height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
 }
 
-
 .project-title {
-    color: colors.$text-color-gray-1;
-    font-size: 2.5rem;
+  color: colors.$text-color-gray-1;
+  font-size: 2.5rem;
 }
 
 .project-desc-box {
-    height: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .project-desc {
-    text-align: center;
-    font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .tech-list {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  height: 6rem;
 }
 
 .tech {
-    margin: auto;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: colors.$text-color-gray-1;
-
-
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: colors.$text-color-gray-1;
 }
 
 .link-button-box {
-    margin-top: 2rem;
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+@media (max-width: 750px) {
+  .project {
+    border: 3px solid colors.$green-color;
+    width: 17rem;
+    height: 37rem;
+  }
+
+  .project-bottom-side {
+    margin: 0 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-title-box {
+    height: 5rem;
+  }
+
+  .project-title {
+    color: colors.$text-color-gray-1;
+    font-size: 2rem;
+  }
+
+  .project-desc-box {
+    height: 7rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  .project-desc {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .tech-list {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    height: 4rem;
+  }
+
+  .tech {
+    font-size: 1.3rem;
+  }
+
+  .link-button-box {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .project {
+    border: 3px solid colors.$green-color;
+    width: 13rem;
+    height: 30rem;
+  }
+
+  .project-title-box {
+    height: 3rem;
+  }
+
+  .project-title {
+    color: colors.$text-color-gray-1;
+    font-size: 1.8rem;
+  }
+
+  .project-desc-box {
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-desc {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .tech-list {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    height: 4rem;
+  }
+
+  .tech {
+    font-size: 1rem;
+  }
+
+  .link-button-box {
+    margin-top: 2rem;
+  }
 }
