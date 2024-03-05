@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { getDatabase, ref, push } from "firebase/database";
 import '../../css/contactme/ContactMe.css';
-import Button from "../Reusable-components/Button";
 
 function ContactMe({ firebase }) {
     const [formData, setFormData] = useState({
